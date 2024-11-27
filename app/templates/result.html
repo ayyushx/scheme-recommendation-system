@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Results</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>Recommendations</title>
+    <link rel="stylesheet" href="/static/styles.css">
 </head>
 <body>
     <div class="container">
-        <h1>Scheme Recommendation Results</h1>
-        <p>Hello, {{ name }}!</p>
+        <h1>Scheme Recommendations</h1>
+        <h2>Hello, {{ name }}!</h2>
         {% if schemes %}
             <p>You are eligible for the following schemes:</p>
             <ul>
@@ -18,7 +18,7 @@
                 {% endfor %}
             </ul>
         {% else %}
-            <p><strong>No schemes match your criteria at the moment.</strong></p>
+            <p>No schemes match your criteria.</p>
         {% endif %}
         <a href="/">Go Back</a>
     </div>

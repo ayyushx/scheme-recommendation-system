@@ -4,17 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Scheme Recommendation</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="/static/styles.css">
 </head>
 <body>
     <div class="container">
         <h1>Scheme Recommendation System</h1>
         <form method="POST">
             <label for="name">Name:</label>
-            <input type="text" id="name" name="name" placeholder="Enter your name" required>
+            <input type="text" id="name" name="name" required>
 
             <label for="age">Age:</label>
-            <input type="number" id="age" name="age" placeholder="Enter your age" required>
+            <input type="number" id="age" name="age" required>
 
             <label for="income">Income Range:</label>
             <select id="income" name="income" required>
