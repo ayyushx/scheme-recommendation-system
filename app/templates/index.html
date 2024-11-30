@@ -4,21 +4,47 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Scheme Recommendation</title>
-    <link rel="stylesheet" href="/static/styles.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="container">
         <h1>Scheme Recommendation System</h1>
-        <form method="POST">
+
+        <!-- Form Section -->
+        <form id="scheme-form" aria-labelledby="form-heading">
+            <!-- Name Field -->
             <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required>
+            <input
+                type="text"
+                id="name"
+                name="name"
+                placeholder="Enter your name"
+                required
+                aria-required="true"
+            >
 
+            <!-- Age Field -->
             <label for="age">Age:</label>
-            <input type="number" id="age" name="age" required>
+            <input
+                type="number"
+                id="age"
+                name="age"
+                placeholder="Enter your age"
+                required
+                min="1"
+                max="120"
+                aria-required="true"
+            >
 
+            <!-- Income Field -->
             <label for="income">Income Range:</label>
-            <select id="income" name="income" required>
-                <option value="">Select Income Range</option>
+            <select
+                id="income"
+                name="income"
+                required
+                aria-required="true"
+            >
+                <option value="" disabled selected>Select Income Range</option>
                 <option value="Below ₹50,000">Below ₹50,000</option>
                 <option value="₹50,000 - ₹1,00,000">₹50,000 - ₹1,00,000</option>
                 <option value="₹1,00,000 - ₹2,50,000">₹1,00,000 - ₹2,50,000</option>
@@ -26,23 +52,42 @@
                 <option value="Above ₹5,00,000">Above ₹5,00,000</option>
             </select>
 
+            <!-- Employment Field -->
             <label for="employment">Employment Status:</label>
-            <select id="employment" name="employment" required>
-                <option value="">Select Employment Status</option>
+            <select
+                id="employment"
+                name="employment"
+                required
+                aria-required="true"
+            >
+                <option value="" disabled selected>Select Employment Status</option>
                 <option value="Employed">Employed</option>
                 <option value="Unemployed">Unemployed</option>
                 <option value="Student">Student</option>
             </select>
 
+            <!-- Residency Field -->
             <label for="residency">Residency:</label>
-            <select id="residency" name="residency" required>
-                <option value="">Select Residency</option>
+            <select
+                id="residency"
+                name="residency"
+                required
+                aria-required="true"
+            >
+                <option value="" disabled selected>Select Residency</option>
                 <option value="Rural">Rural</option>
                 <option value="Urban">Urban</option>
             </select>
 
-            <button type="submit">Find Schemes</button>
+            <!-- Submit Button -->
+            <button type="submit" aria-label="Find Schemes">Find Schemes</button>
         </form>
+
+        <!-- Result Section -->
+        <div id="result" aria-live="polite" role="region"></div>
     </div>
+
+    <!-- Script -->
+    <script src="script.js"></script>
 </body>
 </html>
