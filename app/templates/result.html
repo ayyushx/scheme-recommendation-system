@@ -1,26 +1,16 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Recommendations</title>
-    <link rel="stylesheet" href="/static/styles.css">
-</head>
-<body>
-    <div class="container">
-        <h1>Scheme Recommendations</h1>
-        <h2>Hello, {{ name }}!</h2>
-        {% if schemes %}
-            <p>You are eligible for the following schemes:</p>
-            <ul>
-                {% for scheme in schemes %}
-                    <li>{{ scheme }}</li>
-                {% endfor %}
-            </ul>
-        {% else %}
-            <p>No schemes match your criteria.</p>
-        {% endif %}
-        <a href="/">Go Back</a>
-    </div>
-</body>
-</html>
+<div class="container">
+    <h1>Scheme Recommendations</h1>
+    <h2>Hello, {{ name }}!</h2>
+    {% if schemes %}
+        <p>You are eligible for the following schemes:</p>
+        <ul>
+            {% for scheme in schemes %}
+                <li>{{ scheme }}</li>
+            {% endfor %}
+        </ul>
+        <a href="/" class="btn">Go Back</a>
+    {% else %}
+        <p>No schemes match your criteria.</p>
+        <a href="/" class="btn">Go Back</a>
+    {% endif %}
+</div>

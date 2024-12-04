@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Eligible Schemes</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        h1 {
+            color: #007BFF;
+            text-align: center;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            background-color: #f9f9f9;
+            margin: 5px 0;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Eligible Schemes for {{ name }}</h1>
+    <p>Based on your details, you are eligible for the following schemes:</p>
+    <ul>
+        {% for scheme in schemes %}
+        <li>{{ scheme }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
