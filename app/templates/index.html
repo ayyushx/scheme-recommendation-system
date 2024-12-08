@@ -4,43 +4,101 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Scheme Recommendation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+            margin: 20px;
+        }
+        h1 {
+            text-align: center;
+            color: #343a40;
+        }
+        form {
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #ffffff;
+            border: 1px solid #ced4da;
+            border-radius: 8px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+            color: #495057;
+        }
+        input, select, button {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ced4da;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+        button {
+            background-color: #007bff;
+            color: #ffffff;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
 </head>
 <body>
     <h1>Scheme Recommendation System</h1>
     <form method="POST">
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name" required><br>
+        <!-- Personal Information -->
+        <fieldset>
+            <legend>Personal Information</legend>
 
-        <label for="age">Age:</label>
-        <input type="number" id="age" name="age" required min="1" max="120"><br>
+            <!-- Name Field -->
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" placeholder="Enter your full name" required>
 
-        <label for="income">Income Range:</label>
-        <select id="income" name="income" required>
-            <option value="" disabled selected>Select Income Range</option>
-            <option value="Below ₹50,000">Below ₹50,000</option>
-            <option value="₹50,000 - ₹1,00,000">₹50,000 - ₹1,00,000</option>
-            <option value="₹1,00,000 - ₹2,50,000">₹1,00,000 - ₹2,50,000</option>
-            <option value="₹2,50,000 - ₹5,00,000">₹2,50,000 - ₹5,00,000</option>
-            <option value="Above ₹5,00,000">Above ₹5,00,000</option>
-        </select><br>
+            <!-- Age Field -->
+            <label for="age">Age:</label>
+            <input type="number" id="age" name="age" required min="1" max="120" placeholder="Enter your age">
+        </fieldset>
 
-        <label for="employment">Employment Status:</label>
-        <select id="employment" name="employment" required>
-            <option value="" disabled selected>Select Employment Status</option>
-            <option value="Employed">Employed</option>
-            <option value="Unemployed">Unemployed</option>
-            <option value="Student">Student</option>
-        </select><br>
+        <!-- Additional Details -->
+        <fieldset>
+            <legend>Additional Details</legend>
 
-        <label for="residency">Residency:</label>
-        <select id="residency" name="residency" required>
-            <option value="" disabled selected>Select Residency</option>
-            <option value="Rural">Rural</option>
-            <option value="Urban">Urban</option>
-        </select><br>
+            <!-- Income Range -->
+            <label for="income">Income Range:</label>
+            <select id="income" name="income" required>
+                <option value="" disabled selected>Select Income Range</option>
+                <option value="Below ₹50,000">Below ₹50,000</option>
+                <option value="₹50,000 - ₹1,00,000">₹50,000 - ₹1,00,000</option>
+                <option value="₹1,00,000 - ₹2,50,000">₹1,00,000 - ₹2,50,000</option>
+                <option value="₹2,50,000 - ₹5,00,000">₹2,50,000 - ₹5,00,000</option>
+                <option value="Above ₹5,00,000">Above ₹5,00,000</option>
+            </select>
 
+            <!-- Employment Status -->
+            <label for="employment">Employment Status:</label>
+            <select id="employment" name="employment" required>
+                <option value="" disabled selected>Select Employment Status</option>
+                <option value="Employed">Employed</option>
+                <option value="Unemployed">Unemployed</option>
+                <option value="Student">Student</option>
+            </select>
+
+            <!-- Residency -->
+            <label for="residency">Residency:</label>
+            <select id="residency" name="residency" required>
+                <option value="" disabled selected>Select Residency</option>
+                <option value="Rural">Rural</option>
+                <option value="Urban">Urban</option>
+            </select>
+        </fieldset>
+
+        <!-- Submit Button -->
         <button type="submit">Find Schemes</button>
     </form>
 </body>
 </html>
-0

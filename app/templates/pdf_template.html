@@ -2,36 +2,62 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Eligible Schemes</title>
     <style>
         body {
             font-family: Arial, sans-serif;
             margin: 20px;
+            background-color: #f8f9fa;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
         }
         h1 {
             color: #007BFF;
             text-align: center;
         }
+        p {
+            text-align: center;
+            font-size: 16px;
+            color: #333;
+        }
         ul {
             list-style-type: none;
             padding: 0;
+            margin: 20px 0;
         }
         li {
-            background-color: #f9f9f9;
-            margin: 5px 0;
-            padding: 10px;
+            background-color: #ffffff;
+            margin: 10px 0;
+            padding: 15px;
             border: 1px solid #ddd;
             border-radius: 4px;
+            font-size: 16px;
+            color: #555;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .no-schemes {
+            text-align: center;
+            color: #6c757d;
+            font-style: italic;
         }
     </style>
 </head>
 <body>
     <h1>Eligible Schemes for {{ name }}</h1>
     <p>Based on your details, you are eligible for the following schemes:</p>
+    {% if schemes %}
     <ul>
         {% for scheme in schemes %}
         <li>{{ scheme }}</li>
         {% endfor %}
     </ul>
+    {% else %}
+    <p class="no-schemes">No schemes are available based on the provided details.</p>
+    {% endif %}
 </body>
 </html>
